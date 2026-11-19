@@ -89,6 +89,35 @@
             transform: translateY(-1px);
         }
 
+        .download-btn.alt {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(79,172,254,0.5);
+            color: #cfe9ff;
+            font-size: 16px;
+            padding: 12px 28px;
+            box-shadow: none;
+        }
+
+        .dl-status {
+            margin-top: 16px;
+            background: rgba(52, 168, 83, 0.15);
+            border: 1px solid rgba(52, 168, 83, 0.4);
+            border-radius: 10px;
+            padding: 12px 18px;
+            color: #7ee2a0;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .fallback {
+            margin-top: 14px;
+            color: rgba(255,255,255,0.65);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .fallback a { color: #4facfe; }
+
         .file-info {
             margin-top: 20px;
             color: rgba(255,255,255,0.5);
@@ -183,10 +212,26 @@
 <div class="version-badge"> الإصدار v1.5.6</div>
         <br>
         <a href="https://github.com/a46625282837-dotcom/printing-workshop-app/releases/download/v1.5.6/WorshaApp_v1.5.6.zip"
-           class="download-btn" id="downloadBtn">
+           class="download-btn" id="downloadBtn" target="_blank" rel="noopener"
+           download="WorshaApp_v1.5.6.zip"
+           onclick="document.getElementById('dlStatus').style.display='block'">
             تحميل التطبيق
         </a>
+        <div id="dlStatus" class="dl-status" style="display:none">
+            ✅ بدأ التحميل. ابقَ في الصفحة حتى يكتمل — الملف بحجم 720MB وقد يستغرق عدة دقائق بحسب سرعة الإنترنت.<br>
+            إن ظهرت صفحة فارغة أو لم يبدأ التحميل، استخدم الزر البديل أدناه.
+        </div>
         <div class="file-info">WorshaApp_v1.5.6.zip — 720MB — Windows 10/11 (فك الضغط ثم شغّل WorshaApp.exe)</div>
+        <div class="fallback">
+            إذا لم يعمل التحميل المباشر (بعض الشبكات تحجب تحويلات GitHub):
+            <a href="https://github.com/a46625282837-dotcom/printing-workshop-app/releases/tag/v1.5.6"
+               target="_blank" rel="noopener">افتح صفحة الإصدار على GitHub</a>
+            ثم اضغط على اسم الملف <b>WorshaApp_v1.5.6.zip</b> لتنزيله.
+        </div>
+        <p style="margin-top:16px;">
+            <a href="https://github.com/a46625282837-dotcom/printing-workshop-app/releases/tag/v1.5.6"
+               class="download-btn alt" target="_blank" rel="noopener">تحميل من GitHub (بديل)</a>
+        </p>
         <div class="update-note">👇 بعد تحميل التطبيق فك الضغط عن الملف ثم ثبِّته على جهازك، ويمكنك التواصل مع الإدارة ليساعدوك في التثبيت عبر واتساب <a href="https://wa.me/9647865402819">7865402819</a>.</div>
     </div>
 
